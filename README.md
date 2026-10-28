@@ -1,2 +1,3 @@
 # VBMeta-Disabler-Module-EXPERIMENTAL-
-A disabler VBMeta module
+A simple disabler VBMeta module
+This is experimental, so use own u risk.
