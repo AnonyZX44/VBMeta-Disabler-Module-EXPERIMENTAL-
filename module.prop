@@ -1,0 +1,6 @@
+id=vbmeta_auto_disable
+name=VBMeta Auto Disable Verification
+version=v1.1.0
+versionCode=3
+author=AnonyZX44
+description=Backs up every vbmeta partition, patches verification and verity flags, verifies every write by readback, refuses to touch a locked bootloader, guards restore against build mismatch, and toggles patch or restore from the module action button. Magisk, KernelSU, KernelSU Next, SukiSU, APatch.

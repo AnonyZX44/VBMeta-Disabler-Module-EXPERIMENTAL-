@@ -1,0 +1,26 @@
+#!/sbin/sh
+umask 022
+
+OUTFD=$2
+ZIPFILE=$3
+export OUTFD ZIPFILE
+
+ui_print() { printf '%s\n' "$1"; }
+
+mount /data 2>/dev/null
+
+if [ ! -f /data/adb/magisk/util_functions.sh ]; then
+  ui_print "Magisk not detected in this installer"
+  ui_print "KernelSU, KernelSU Next, SukiSU and APatch install this zip from their own manager"
+  exit 1
+fi
+
+. /data/adb/magisk/util_functions.sh
+
+if [ "$MAGISK_VER_CODE" -lt 20400 ]; then
+  ui_print "Magisk 20.4 or newer required"
+  exit 1
+fi
+
+install_module
+exit 0

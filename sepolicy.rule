@@ -1,0 +1,1 @@
+allow magisk block_device:blk_file { open read write ioctl }
